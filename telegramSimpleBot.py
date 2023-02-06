@@ -1,11 +1,7 @@
-"""
-t.me/edson001_bot
-Key-API 6023517900:AAEhgKFV_QDN-iMcunaS2wOQRBmBxf9uaJ0
-"""
 import telebot
+import telegramSimpleBot_TOKEN as Token
 
-API_KEY = "6023517900:AAEhgKFV_QDN-iMcunaS2wOQRBmBxf9uaJ0"
-bot = telebot.TeleBot(API_KEY)
+bot = telebot.TeleBot(Token.API_KEY)
 
 
 @bot.message_handler(commands=["opcao1"])
@@ -25,7 +21,8 @@ def opcao3(mensagem):
 
 
 def verificar(mensagem):
-    return True
+    if mensagem:
+        return True
 
 
 @bot.message_handler(func=verificar)
