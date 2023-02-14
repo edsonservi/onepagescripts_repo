@@ -1,7 +1,7 @@
 import telebot
-import telegramSimpleBot_TOKEN as Token
+import config as token
 
-bot = telebot.TeleBot(Token.API_KEY)
+bot = telebot.TeleBot(token.API_KEY)
 
 
 @bot.message_handler(commands=["opcao1"])
